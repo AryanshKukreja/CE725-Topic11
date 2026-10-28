@@ -16,3 +16,7 @@ Operator wage,25000,INR/month,Assumption,,,Data Lead to fill
 Operator hours,200,h/month,Assumption (8 h x 25 days),,,to confirm
 Blue Book for Bulldozers,TrainAndValid.csv,-,Kaggle competition data,https://www.kaggle.com/c/bluebook-for-bulldozers,2026-10-29,used
 US CPI-U annual averages 1989-2012,-,index,BLS series CUUR0000SA0,https://data.bls.gov/timeseries/CUUR0000SA0,,used
+Backhoe loader wet hire (hilly),2200,INR/hour,Arunachal Pradesh PWD APSR 2023 code P&M-098 (incl operator fuel repairs),https://www.arunachalpwd.org/pdf/31072025/schedule_analysis_rates_road_bridge_works-2023.pdf,2026-10-29,ai-extracted-verify
+Backhoe loader JCB 3D wet hire (hilly),11645 per 8-h day = 1455.63/h,INR,UT Ladakh Analysis of Rates Vol-1 code 0020 'with driver and fuel',https://cdnbbsr.s3waas.gov.in/s395192c98732387165bf8e396c0f2dad2/uploads/2023/06/2023060525.pdf,2026-10-29,ai-extracted-verify
+Backhoe loader JCB hire (plains),6272 per 8-h day = 784/h,INR,Tamil Nadu Highways SOR 2024-25 Annexure IX code H-0094,https://www.tnhighways.net/pdf/SOR_2024_25.pdf,2026-10-29,ai-extracted-verify
+Machinery hire rate basis,equipment cost + repairs + POL + operational charges,-,APSR 2023 General Notes para 5; TN SOR Annexure VIII note 2 (operator + fuel included; 8-h shift; excl GST),,2026-10-29,ai-extracted-verify

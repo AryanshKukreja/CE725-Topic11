@@ -17,6 +17,8 @@ import pandas as pd
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 CURVE_PATH = DATA_DIR / "residual_curve.csv"
 POINTS_PATH = DATA_DIR / "residual_points.csv"
+# The raw Kaggle file is git-ignored; it may sit in data/ or in the repo root.
+BLUEBOOK_CANDIDATES = (DATA_DIR / "TrainAndValid.csv", DATA_DIR.parent / "TrainAndValid.csv")
 
 MAX_AGE = 25
 
@@ -38,8 +40,22 @@ GROUP_NAMES = {
 }
 
 
-def load_bluebook(csv_path):
+def bluebook_path(csv_path=None):
+    """Locate the raw Kaggle file: an explicit path, else data/, else the repo root."""
+    if csv_path is not None:
+        return csv_path
+    for cand in BLUEBOOK_CANDIDATES:
+        if cand.exists():
+            return cand
+    raise FileNotFoundError(
+        "TrainAndValid.csv not found. Download it from the Kaggle Blue Book for Bulldozers "
+        f"competition into {BLUEBOOK_CANDIDATES[0].parent} (see README)."
+    )
+
+
+def load_bluebook(csv_path=None):
     """Read the columns we need and build age, real log price and log hours."""
+    csv_path = bluebook_path(csv_path)
     cols = ["SalePrice", "ModelID", "YearMade", "MachineHoursCurrentMeter", "saledate", "ProductGroup"]
     df = pd.read_csv(csv_path, usecols=cols, low_memory=False)
     df["sale_year"] = pd.to_datetime(df["saledate"], format="%m/%d/%Y %H:%M").dt.year
@@ -92,7 +108,7 @@ def fit_group(g):
     return retention, summary, observed
 
 
-def fit_all(csv_path, seed=725):
+def fit_all(csv_path=None, seed=725):
     """Fit every product group. Returns (curve, summary, points) DataFrames."""
     df = load_bluebook(csv_path)
     curves, summaries, points = [], [], []

@@ -27,7 +27,7 @@ pytest            # formula checks, edge cases, benchmark vs hand sheet
 
 ## Blue Book data
 
-`TrainAndValid.csv` is git-ignored because it is too large for GitHub. To refit the curves, download it from the [Kaggle competition](https://www.kaggle.com/c/bluebook-for-bulldozers/data) into the repo root and run the notebook. The app itself needs only the small fitted CSVs in `data/`.
+`TrainAndValid.csv` is git-ignored because it is too large for GitHub. To refit the curves, download it from the [Kaggle competition](https://www.kaggle.com/c/bluebook-for-bulldozers/data) into `data/` (the repo root also works) and run the notebook. The app itself needs only the small fitted CSVs in `data/`.
 
 ## Model conventions
 
