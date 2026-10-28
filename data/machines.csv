@@ -1,0 +1,8 @@
+machine,bluebook_group,price,life_years,hours_per_year,salvage_pct_fallback,hp,fuel_lph,repair_factor,tyre_cost,tyre_life_h,rent_mode,rent_hourly,rent_month,rent_month_hours,rent_extra_hour,rent_includes_operator,rent_includes_fuel,status,source
+Backhoe loader (JCB 3DX),BL,3500000,9,1500,0.10,76,6.0,1.5,160000,3000,monthly,1200,90000,240,450,True,False,partial,"Price & rent: IndiaMART listing Feb 2026 (plan); life: Companies Act Sch. II; repairs: MoRTH hire-charge formula; fuel, tyres, hp: PLACEHOLDER"
+Excavator 20 t,TEX,9500000,9,1500,0.10,140,14.0,1.5,0,0,monthly,2600,320000,200,1600,True,False,placeholder,PLACEHOLDER - Data Lead to replace with 5 quotes (median)
+Wheel loader 2 m3,WL,5500000,9,1500,0.10,110,10.0,1.5,400000,3500,monthly,1800,220000,200,1100,True,False,placeholder,PLACEHOLDER - Data Lead to replace with 5 quotes (median)
+Motor grader,MG,14000000,12,1200,0.10,145,12.0,1.5,600000,4000,monthly,3200,400000,200,2000,True,False,placeholder,PLACEHOLDER - Data Lead to replace with 5 quotes (median)
+Tipper 10 m3,,4000000,8,2000,0.10,200,8.0,1.0,300000,4000,monthly,1300,150000,200,750,True,False,placeholder,PLACEHOLDER - no Blue Book group; fixed salvage %
+Transit mixer 6 m3,,4500000,8,2000,0.10,200,7.0,1.0,300000,4000,monthly,1400,160000,200,800,True,False,placeholder,PLACEHOLDER - no Blue Book group; fixed salvage %
+Mobile crane 14 t,,3500000,15,1200,0.05,75,5.0,1.0,200000,3000,monthly,1500,180000,200,900,True,False,placeholder,PLACEHOLDER - no Blue Book group; fixed salvage %

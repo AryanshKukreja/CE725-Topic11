@@ -1,0 +1,18 @@
+item,value,unit,source,url,accessed,status
+JCB 3DX purchase price,3500000,INR,IndiaMART listing (replace with dealer quote),,2026-02,from plan
+JCB 3DX rent,90000 per 240 h + 450/h extra,INR,IndiaMART listing (wet hire incl. operator),,2026-02,from plan
+Useful life earth-moving,9,years,Companies Act 2013 Schedule II,,,from plan
+Useful life road-making,12,years,Companies Act 2013 Schedule II,,,from plan
+Useful life cranes < 100 t,15,years,Companies Act 2013 Schedule II,,,from plan
+Utilisation basis,1500,h/year,MoRTH hire-charge circular,,,from plan
+Repairs,150% of price over life hours,-,MoRTH hire-charge formula,,,from plan
+Tax depreciation P&M,15% WDV,-,Income-tax Act 2025,,,from plan
+Tax rate,25.17,%,Assumption: domestic company concessional regime,,,to confirm
+Discount and loan rate,11,%,Within 10.5-16% equipment loan range,,,to confirm
+Diesel price Mumbai,97.83,INR/L,,,2026-10,from plan
+Lubricants,25% of fuel cost,-,Assumption,,,to confirm against MoRTH circular
+Insurance,1% of price per year,-,Assumption,,,to confirm
+Operator wage,25000,INR/month,Assumption,,,Data Lead to fill
+Operator hours,200,h/month,Assumption (8 h x 25 days),,,to confirm
+Blue Book for Bulldozers,TrainAndValid.csv,-,Kaggle competition data,https://www.kaggle.com/c/bluebook-for-bulldozers,2026-10-29,used
+US CPI-U annual averages 1989-2012,-,index,BLS series CUUR0000SA0,https://data.bls.gov/timeseries/CUUR0000SA0,,used

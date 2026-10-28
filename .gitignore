@@ -1,0 +1,6 @@
+# Kaggle Blue Book data: ~120 MB, over GitHub's file limit. Download from Kaggle (see README).
+TrainAndValid.csv
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
