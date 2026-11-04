@@ -1,16 +1,16 @@
 item,hand_value,note
-hourly: Depreciation,,
-"hourly: Interest, insurance, tax",,
-hourly: Fuel,,
-hourly: Lubricants,,
-hourly: Repairs & maintenance,,
-hourly: Tyres,,
-hourly: Operator,,
-hourly: total,,
-Buy NPV,,
-Buy EAC,,
-Lease NPV,,
-Lease EAC,,
-Rent NPV,,
-Rent EAC,,
-Break-even H* (buy vs rent),,
+hourly: Depreciation,119.67,(P - S9)/(n*H); S9 = 3.5M x 0.5384 (BL age 9)
+"hourly: Interest, insurance, tax",222.56,(0.11 + 0.01) x AAI / H; AAI = [P(n+1) + S9(n-1)]/2n
+hourly: Fuel,586.98,6.0 L/h x 97.83
+hourly: Lubricants,146.75,25% of fuel
+hourly: Repairs & maintenance,388.89,1.5 x P / (9 x 1500)
+hourly: Tyres,53.33,"160,000 / 3,000 h"
+hourly: Operator,125.00,"25,000 / 200 h"
+hourly: total,1643.18,sum of the seven lines
+Buy NPV,7266708.10,"P at yr 0; opex x (1-t) yrs 1-5; 15% WDV shield; S5 = 3.5M x 0.7210, tax on (S5 - WDV5)"
+Buy EAC,1966155.46,"NPV x CRF(11%, 5)"
+Lease NPV,7056310.85,"(50,000 x 12 + 1,300.95 x 1500) x (1-t), PV over 5 yrs"
+Lease EAC,1909228.21,"NPV x CRF(11%, 5)"
+Rent NPV,4599500.88,"(90,000 x 1500/240 + 733.73 x 1500) x (1-t), PV over 5 yrs"
+Rent EAC,1244488.38,"NPV x CRF(11%, 5)"
+Break-even H* (buy vs rent),,no crossing: own variable 1300.95/h > rent marginal 1108.73/h (1183.73/h above 2880 h)

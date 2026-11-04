@@ -261,7 +261,7 @@ with tabs[5]:
     st.caption("Hand values come from data/benchmark_hand.csv (Validation Engineer's spreadsheet). "
                "Pass rule: within 0.5%. This uses fixed benchmark inputs, not the sidebar.")
     vt = validation_table()
-    st.dataframe(vt.style.format({"hand_value": "{:,.2f}", "tool_value": "{:,.2f}", "diff_pct": "{:+.2f}%"}, na_rep="-"),
+    st.dataframe(vt.style.format({"hand_value": "{:,.2f}", "tool_value": "{:,.2f}", "diff_pct": "{:+.4f}%"}, na_rep="-"),
                  hide_index=True, width="stretch")
     done = vt[vt["result"] != "pending"]
     st.write(f"{(done['result'] == 'pass').sum()} of {len(done)} filled lines pass; {len(vt) - len(done)} pending.")

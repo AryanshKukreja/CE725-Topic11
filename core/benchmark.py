@@ -44,4 +44,7 @@ def validation_table():
     hand["diff_pct"] = (hand["tool_value"] - hand["hand_value"]) / hand["hand_value"] * 100
     hand["result"] = hand["diff_pct"].abs().le(TOL * 100).map({True: "pass", False: "FAIL"})
     hand.loc[hand["hand_value"].isna(), "result"] = "pending"
+    # A blank hand value marked "no crossing" passes when the tool also finds no crossing
+    no_cross = hand["hand_value"].isna() & hand["note"].fillna("").str.startswith("no crossing")
+    hand.loc[no_cross, "result"] = hand.loc[no_cross, "tool_value"].isna().map({True: "pass", False: "FAIL"})
     return hand
